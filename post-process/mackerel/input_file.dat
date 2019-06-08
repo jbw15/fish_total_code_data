@@ -1,0 +1,23 @@
+read_marker             # 0: from *.mat 1: from marker files 
+0
+num_start     num_end     #  
+4010          8000
+npoint_body   npoint_tail  
+1962          165
+n_interval 
+10
+nbody_peri    ntail_vtcl
+40            15
+nl_body       nl_tail      nl_tail_1
+50            15           11
+nl_totl
+65
+Ux_osc 	      Uy_osc
+0.0000        0.0000
+U_0
+0.3
+dt 
+5e-4
+refine1 	refine2
+2		2
+
