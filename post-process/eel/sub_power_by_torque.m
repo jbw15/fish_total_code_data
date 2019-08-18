@@ -30,13 +30,17 @@ axis xy;
 cb = colorbar;
 xlabel('Head<-Position->Tail','FontName','Times');
 ylabel('Time','FontName','Times');
-title([fn  ' distribution'], 'Fontname', 'Times', 'FontSize', 20)
+% title([fn  ' distribution'], 'Fontname', 'Times', 'FontSize', 20)
 set(gca,'FontSize',20,'xtick',[0.0 0.5 1.0], 'ytick',[0 1.0 2.0]);
 colormap('jet');
 set(cb,'xtick',[low_v 0 top_v])
 caxis([low_v top_v])
-xlabel('\fontsize{20}\fontname{Times new roman}Head<-Position->Tail')
-ylabel('\fontsize{20}\fontname{Times new roman}Time')
+xlabel('\fontsize{20}\fontname{Times}Head<-Position->Tail')
+ylabel('\fontsize{20}\fontname{Times}Time')
+set(gca,'Fontsize',20,'FontName','Times')
+set(gcf,'unit','centimeters','position',[8 8 15 15 ]);
+gg = gcf;
+print(gg,'result-figure/e-power-1.eps','-r600','-depsc')
 hold off
 
 
@@ -99,14 +103,18 @@ axis xy;
 cb = colorbar;
 xlabel('Head<-Position->Tail','FontName','Times');
 ylabel('Time','FontName','Times');
-title([fn  ' distribution'], 'Fontname', 'Times', 'FontSize', 20)
+% title([fn  ' distribution'], 'Fontname', 'Times', 'FontSize', 20)
 set(gca,'FontSize',20,'xtick',[0.0 0.5 1.0], 'ytick',[0 1.0 2.0]);
 colormap('jet');
 set(cb,'xtick',[low_v 0 top_v])
 caxis([low_v top_v])
-xlabel('\fontsize{20}\fontname{Times new roman}Head<-Position->Tail')
-ylabel('\fontsize{20}\fontname{Times new roman}Time')
-hold off     
+xlabel('\fontsize{20}\fontname{Times}Head<-Position->Tail')
+ylabel('\fontsize{20}\fontname{Times}Time')
+set(gca,'Fontsize',20,'FontName','Times')
+set(gcf,'unit','centimeters','position',[8 8 15 15 ]);
+gg = gcf;
+print(gg,'result-figure/e-torque-ela-1.eps','-r600','-depsc')
+hold off   
 
 %===========================power_sum_vis==================================
 low_v = -6e-3;
@@ -121,14 +129,18 @@ axis xy;
 cb = colorbar;
 xlabel('Head<-Position->Tail','FontName','Times');
 ylabel('Time','FontName','Times');
-title([fn  ' distribution'], 'Fontname', 'Times', 'FontSize', 20)
+% title([fn  ' distribution'], 'Fontname', 'Times', 'FontSize', 20)
 set(gca,'FontSize',20,'xtick',[0.0 0.5 1.0], 'ytick',[0 1.0 2.0]);
 colormap('jet');
 set(cb,'xtick',[low_v 0 top_v])
 caxis([low_v top_v])
-xlabel('\fontsize{20}\fontname{Times new roman}Head<-Position->Tail')
-ylabel('\fontsize{20}\fontname{Times new roman}Time')
-hold off  
+xlabel('\fontsize{20}\fontname{Times}Head<-Position->Tail')
+ylabel('\fontsize{20}\fontname{Times}Time')
+set(gca,'Fontsize',20,'FontName','Times')
+set(gcf,'unit','centimeters','position',[8 8 15 15 ]);
+gg = gcf;
+print(gg,'result-figure/e-power-vis-1.eps','-r600','-depsc')
+hold off
 
 %=====================power_sum============================================
 low_v = -6e-3;
@@ -143,14 +155,18 @@ axis xy;
 cb = colorbar;
 xlabel('Head<-Position->Tail','FontName','Times');
 ylabel('Time','FontName','Times');
-title([fn  ' distribution'], 'Fontname', 'Times', 'FontSize', 20)
+% title([fn  ' distribution'], 'Fontname', 'Times', 'FontSize', 20)
 set(gca,'FontSize',20,'xtick',[0.0 0.5 1.0], 'ytick',[0 1.0 2.0]);
 colormap('jet');
 set(cb,'xtick',[low_v 0 top_v])
 caxis([low_v top_v])
-xlabel('\fontsize{20}\fontname{Times new roman}Head<-Position->Tail')
-ylabel('\fontsize{20}\fontname{Times new roman}Time')
-hold off  
+xlabel('\fontsize{20}\fontname{Times}Head<-Position->Tail')
+ylabel('\fontsize{20}\fontname{Times}Time')
+set(gca,'Fontsize',20,'FontName','Times')
+set(gcf,'unit','centimeters','position',[8 8 15 15 ]);
+gg = gcf;
+print(gg,'result-figure/e-power-ela-1.eps','-r600','-depsc')
+hold off
 
 ds=0.01;
 for nt = 1:num

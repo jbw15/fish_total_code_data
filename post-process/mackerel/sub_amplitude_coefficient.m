@@ -75,9 +75,12 @@ xticks([0 1])
 ylim([-2*pi 2*pi])
 yticks([-2*pi -pi 0 pi 2*pi])
 yticklabels({'-2\pi','-\pi','0','\pi','2\pi'})
-xlabel('\fontsize{20}\fontname{Times new roman}Head<-Position->Tail')
-set(gca,'FontSize',20);
+xlabel('\fontsize{20}\fontname{Times}Head<-Position->Tail')
+set(gca,'FontSize',20,'FontName','Times');
 set(gca,'ydir','reverse')
+set(gcf,'unit','centimeters','position',[8 8 15 15 ]);
+gg = gcf;
+print(gg,'result-figure/m-v-a-1.eps','-r600','-depsc')
 
 % for j=2:98
 %     r(j,:)=fminsearch(@(c)(sum((c(1)*(A(:,j-1)+A(:,j)+A(:,j+1))+c(2)*(B(:,j-1)+B(:,j)+B(:,j+1))-sum(C(:,j-1:j+1),2)).^2)),[0.1 0.2]);

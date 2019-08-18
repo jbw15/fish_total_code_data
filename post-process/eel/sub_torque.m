@@ -83,14 +83,20 @@ plot([0 0.45],[1.25 2],'k--' ,'linewidth',2)
 plot([0 0.16],[1.75 2],'k-' ,'linewidth',2)
 axis xy;
 cb = colorbar;
-xlabel('Head<-Position->Tail','FontName','Times');
-ylabel('Time','FontName','Times');
-title([fn  ' distribution'], 'Fontname', 'Times', 'FontSize', 20)
-set(gca,'FontSize',20,'xtick',[0.0 0.5 1.0], 'ytick',[0 0.5 1.0 1.5 2.0]);
+xlabel('Head<-Position->Tail','FontName','Times','FontSize',20);
+ylabel('Time','FontName','Times','FontSize',20);
+% title([fn  ' distribution'], 'Fontname', 'Times', 'FontSize', 12)
 set(gca,'yticklabel',{'0','0.5','1.0','1.5','2.0'});
+set(gca,'FontSize',20,'FontName','Times','xtick',[0.0 0.5 1.0], 'ytick',[0 0.5 1.0 1.5 2.0]);
 colormap('jet');
 set(cb,'xtick',[low_v 0 top_v])
+xlabel('\fontsize{20}\fontname{Times}Head<-Position->Tail')
+ylabel('\fontsize{20}\fontname{Times}Time')
+set(gca,'Fontsize',20,'FontName','Times')
+set(gcf,'unit','centimeters','position',[8 8 15 15 ]);
 caxis([low_v top_v])
+gg = gcf;
+print(gg,'result-figure/e-torque-1.eps','-r600','-depsc')
 hold off
 
 tt = (1:400)/200;
@@ -127,14 +133,18 @@ plot([0 0.45],[1.25 2],'k--' ,'linewidth',2)
 plot([0 0.16],[1.75 2],'k-' ,'linewidth',2)
 axis xy;
 cb = colorbar;
-xlabel('Head<-Position->Tail','FontName','Times');
-ylabel('Time','FontName','Times');
-set(gca,'FontSize',20,'xtick',[0.0 0.5 1.0], 'ytick',[0 1.0 2.0]);
+xlabel('Head<-Position->Tail','FontName','Times','FontSize',20);
+ylabel('Time','FontName','Times','FontSize',20);
+set(gca,'FontSize',20,'FontName','Times','xtick',[0.0 0.5 1.0], 'ytick',[0 1.0 2.0]);
 colormap('jet');
 set(cb,'xtick',[low_v 0 top_v])
 caxis([low_v top_v])
-xlabel('\fontsize{20}\fontname{Times new roman}Head<-Position->Tail')
-ylabel('\fontsize{20}\fontname{Times new roman}Time')
+xlabel('\fontsize{20}\fontname{Times}Head<-Position->Tail')
+ylabel('\fontsize{20}\fontname{Times}Time')
+set(gca,'Fontsize',20,'FontName','Times')
+set(gcf,'unit','centimeters','position',[8 8 15 15 ]);
+gg = gcf;
+print(gg,'result-figure/e-torque-vis-1.eps','-r600','-depsc')
 hold off
        
         

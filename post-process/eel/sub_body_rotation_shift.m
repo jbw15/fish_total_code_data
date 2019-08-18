@@ -13,7 +13,6 @@ theta3 = atan((pnt_body1(num/2,1,2)-pnt_body1(1,1,2))/(pnt_body1(1,1,1)-pnt_body
 theta4 = atan((pnt_body1(num/2,end,2)-pnt_body1(1,end,2))/(pnt_body1(1,end,1)-pnt_body1(num/2,end,1)));
 theta11 = 0.5*(theta1+theta2);
 theta22 = 0.5*(theta3+theta4);
-
 theta = 0.5*(theta11 + theta22);
 
 %Computing lateral displacement of eel

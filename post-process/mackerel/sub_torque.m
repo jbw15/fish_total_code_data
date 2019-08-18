@@ -109,15 +109,18 @@ plot([0.2205 1],[0 0.75],'k-','linewidth',2)
 plot([0.8152 1],[0 0.25],'k--' ,'linewidth',2)
 axis xy;
 cb = colorbar;
-xlabel('Head<-Position->Tail','FontName','Times');
-ylabel('Time','FontName','Times');
-title([fn  ' distribution'], 'Fontname', 'Times', 'FontSize', 20)
-set(gca,'FontSize',20,'xtick',[0.0 0.5 1.0], 'ytick',[0 0.5 1.0 1.5 2.0]);
+xlabel('Head<-Position->Tail','FontName','Times','Fontsize',20);
+ylabel('Time','FontName','Times','Fontsize',20);
+%title([fn  ' distribution'], 'Fontname', 'Times', 'FontSize', 12)
+set(gca,'FontName','Times','FontSize',20,'xtick',[0.0 0.5 1.0], 'ytick',[0 0.5 1.0 1.5 2.0]);
 colormap('jet');
 set(cb,'xtick',[low_v 0 top_v])
 caxis([low_v top_v])
-xlabel('\fontsize{20}\fontname{Times new roman}Head<-Position->Tail')
-ylabel('\fontsize{20}\fontname{Times new roman}Time')
+set(gcf,'unit','centimeters','position',[8 8 15 15 ]);
+xlabel('\fontsize{20}\fontname{Times}Head<-Position->Tail')
+ylabel('\fontsize{20}\fontname{Times}Time')
+gg = gcf;
+print(gg,'result-figure/m-torque-1.eps','-r600','-depsc')
 hold off
 
 % Torque by viscosity force
@@ -161,14 +164,17 @@ plot([0.2205 1],[0 0.75],'k-','linewidth',2)
 plot([0.8152 1],[0 0.25],'k--' ,'linewidth',2)
 axis xy;
 cb = colorbar;
-xlabel('Head<-Position->Tail','FontName','Times');
-ylabel('Time','FontName','Times');
-title([fn  ' distribution'], 'Fontname', 'Times', 'FontSize', 20)
-set(gca,'FontSize',20,'xtick',[0.0 0.5 1.0], 'ytick',[0 1.0 2.0]);
+xlabel('Head<-Position->Tail','FontName','Times','Fontsize',20);
+ylabel('Time','FontName','Times','Fontsize',20);
+%title([fn  ' distribution'], 'Fontname', 'Times', 'FontSize', 20)
+set(gca,'Fontname','Times','FontSize',20,'xtick',[0.0 0.5 1.0], 'ytick',[0 1.0 2.0]);
 colormap('jet');
 set(cb,'xtick',[low_v 0 top_v])
 caxis([low_v top_v])
-xlabel('\fontsize{20}\fontname{Times new roman}Head<-Position->Tail')
-ylabel('\fontsize{20}\fontname{Times new roman}Time')
+set(gcf,'unit','centimeters','position',[8 8 15 15 ]);
+xlabel('\fontsize{20}\fontname{Times}Head<-Position->Tail')
+ylabel('\fontsize{20}\fontname{Times}Time')
+gg = gcf;
+print(gg,'result-figure/m-torque-vis-1.eps','-r600','-depsc')
 hold off
 % 

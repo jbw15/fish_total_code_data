@@ -97,15 +97,18 @@ figure();
 imagesc(pot1,xxt,sts_int_s0);%
 axis xy;
 cb = colorbar;
-xlabel('Head<-Position->Tail','FontName','Times');
-ylabel('Time','FontName','Times');
-title([fn  ' distribution from CFD'], 'Fontname', 'Times', 'FontSize', 20)
-set(gca,'FontSize',20,'xtick',[0.0 0.5 1.0], 'ytick',[0 1.0 2.0]);
+xlabel('Head<-Position->Tail','FontName','Times','FontSize',20);
+ylabel('Time','FontName','Times','FontSize',20);
+%title([fn  ' distribution from CFD'], 'Fontname', 'Times', 'FontSize',12)
+set(gca,'Fontname','Times','FontSize',20,'xtick',[0.0 0.5 1.0], 'ytick',[0 1.0 2.0]);
 colormap('jet');
 set(cb,'xtick',[low_v 0 top_v])
 caxis([low_v top_v])
-xlabel('\fontsize{20}\fontname{Times new roman}Head<-Position->Tail')
-ylabel('\fontsize{20}\fontname{Times new roman}Time')
+set(gcf,'unit','centimeters','position',[8 8 15 15 ]);
+xlabel('\fontsize{20}\fontname{Times}Head<-Position->Tail')
+ylabel('\fontsize{20}\fontname{Times}Time')
+gg = gcf;
+print(gg,'result-figure/m-fx-1.eps','-r600','-depsc')
 
 index = 2;
 if index ==1
@@ -129,15 +132,20 @@ figure();
 imagesc(pot1,xxt,sts_int_s1);%
 hold on
 xs = linspace(0,1,2*(nl_totl-1)); xt = (1:800)/400;
-contour(xs(2:end-2),xt,sts_int_fine_f(:,2:end-2,index),[0,0],'--k','LineWidth',3)
+contour(xs(2:end-2),xt,sts_int_fine_f(:,2:end-2,index),[0 0],'--k','LineWidth',3)
 axis xy;
 cb = colorbar;
-xlabel('Head<-Position->Tail','FontName','Times');
-ylabel('Time','FontName','Times');
-title([fn  ' distribution from CFD'], 'Fontname', 'Times', 'FontSize', 20)
-set(gca,'FontSize',20,'xtick',[0.0 0.5 1.0], 'ytick',[0 1.0 2.0]);
+xlabel('Head<-Position->Tail','FontName','Times','FontSize',20);
+ylabel('Time','FontName','Times','FontSize',20);
+%title([fn  ' distribution from CFD'], 'Fontname', 'Times', 'FontSize', 12)
+set(gca,'Fontname','Times','FontSize',20,'xtick',[0.0 0.5 1.0], 'ytick',[0 1.0 2.0]);
 colormap('jet');
 set(cb,'xtick',[low_v 0 top_v])
 caxis([low_v top_v])
-xlabel('\fontsize{20}\fontname{Times new roman}Head<-Position->Tail')
-ylabel('\fontsize{20}\fontname{Times new roman}Time')
+set(gcf,'unit','centimeters','position',[8 8 15 15]);
+xlabel('\fontsize{20}\fontname{Times}Head<-Position->Tail')
+ylabel('\fontsize{20}\fontname{Times}Time')
+gg = gcf;
+print(gg,'result-figure/m-fy-1.eps','-r600','-depsc')
+hold off
+

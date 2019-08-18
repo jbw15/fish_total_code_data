@@ -87,7 +87,7 @@ num = (num_end-num_start)/n_interval+1;
     
          % calculate the details
          %sub_power_analysis;  
-         close all
+%          close all
         
     end
         

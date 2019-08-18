@@ -60,7 +60,7 @@ elseif(read_marker == 0)
 %     pnt_body = pnt_body_t;
 %     pnt_tail = pnt_tail_t;
 %     sub_velocity
-    
+%     
 % refining the tail mesh for the force calculation(operate on pnt_tail and frc_tail)
     sub_refine_tail;
     [junk1 nfine_tail junk2]= size(pnt_fine_tail);

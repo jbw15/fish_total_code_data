@@ -14,15 +14,15 @@ for nt = 1:num
     cx(nt)=sum(dm.*hhs(nt,:,1))/sum(dm);
     cy(nt)=sum(dm.*hhs(nt,:,2))/sum(dm);
 end
-Ux_osc=(cx(400)-cx(1))/(dt*400*10)
-Uy_osc=(cy(400)-cy(1))/(dt*400*10)
+Ux_osc=(cx(400)-cx(1))/(dt*399*10)
+Uy_osc=(cy(400)-cy(1))/(dt*399*10)
 
-Ux_osc1=(cx(200)-cx(1))/(dt*200*10)
-Uy_osc1=(cy(200)-cy(1))/(dt*200*10) 
-Ux_osc2=(cx(400)-cx(201))/(dt*200*10)
-Uy_osc2=(cy(400)-cy(201))/(dt*200*10)
-
+ Ux_osc1=(cx(200)-cx(1))/(dt*199*10)
+ Uy_osc1=(cy(200)-cy(1))/(dt*199*10) 
+ Ux_osc2=(cx(400)-cx(201))/(dt*199*10)
+Uy_osc2=(cy(400)-cy(201))/(dt*199*10)
+% % 
 U1=sqrt((0.3-Ux_osc1)^2+Uy_osc1^2)
 U2=sqrt((0.3-Ux_osc2)^2+Uy_osc2^2)
-(sqrt((0.3-Ux_osc1)^2+Uy_osc1^2)-sqrt((0.3-Ux_osc2)^2+Uy_osc2^2))/sqrt((0.3-Ux_osc1)^2+Uy_osc1^2)
+ (sqrt((0.3-Ux_osc1)^2+Uy_osc1^2)-sqrt((0.3-Ux_osc2)^2+Uy_osc2^2))/sqrt((0.3-Ux_osc1)^2+Uy_osc1^2)
 
