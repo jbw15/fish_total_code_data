@@ -2,3 +2,4 @@ elist_eel filter=lfs diff=lfs merge=lfs -text
 nlist_eel filter=lfs diff=lfs merge=lfs -text
 eel_original.mat filter=lfs diff=lfs merge=lfs -text
 mackerel_original.mat filter=lfs diff=lfs merge=lfs -text
+mackerel_original_7_8.mat filter=lfs diff=lfs merge=lfs -text

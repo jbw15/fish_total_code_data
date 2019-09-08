@@ -55,8 +55,8 @@ xlabel('\fontsize{20}\fontname{Times}Head<-Position->Tail')
 ylabel('\fontsize{20}\fontname{Times}Time')
 set(gca,'Fontsize',20,'FontName','Times')
 set(gcf,'unit','centimeters','position',[8 8 15 15 ]);
-% gg = gcf;
-% print(gg,'result-figure/e-fy-1.eps','-r600','-depsc')
+gg = gcf;
+print(gg,'result-figure/e-fy-1.eps','-r600','-depsc')
 hold off
 
 %=================================fx=======================================
@@ -92,7 +92,7 @@ xlabel('\fontsize{20}\fontname{Times}Head<-Position->Tail')
 ylabel('\fontsize{20}\fontname{Times}Time')
 set(gca,'Fontsize',20,'FontName','Times')
 set(gcf,'unit','centimeters','position',[8 8 15 15 ]);
-% gg = gcf;
-% print(gg,'result-figure/e-fx-1.eps','-r600','-depsc')
+gg = gcf;
+print(gg,'result-figure/e-fx-1.eps','-r600','-depsc')
 hold off
 

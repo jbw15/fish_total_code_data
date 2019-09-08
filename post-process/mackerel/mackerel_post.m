@@ -21,7 +21,7 @@ num = (num_end - num_start)/n_interval+1;
 %==============================================================================
 elseif(read_marker == 0)
 
-    load mackerel_original.mat
+    load mackerel_original_7_8.mat
     data_body = p1;
     data_tail = p2;
     [num junk1 junk2] = size(data_body);

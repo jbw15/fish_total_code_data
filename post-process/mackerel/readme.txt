@@ -20,7 +20,7 @@ sub_torque.m, sub_power_by_torque.m and sub_power_by_force calculate the torque 
 
 sub_amplitude_coefficient.m analysis the relationship between force computed by CFD and velocity and acceleration.
 
-mackerel_original.mat is the data from CFD;
+mackerel_original.mat and mackerel_original_7_8.mat are the data from CFD;(different two cycles.)
 
 dm.mat , dm3_1.mat , ss.mat, area.mat are mass of segment, added mass of segment arc length of segment and area of segment.
 
