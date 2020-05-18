@@ -31,7 +31,7 @@ plot(ss,sum(power_tt)/2,'-.r','LineWidth',4)
 hold on
 plot(ss,sum(power_sum_positive)/2,':g','LineWidth',4)
 hold on
-plot(pot,sum(power_s2)/2,'--c','LineWidth',4)
+plot(pot,sum(-power_fs2)/2,'--c','LineWidth',4)
 legend('W^{+}','W','W^{+}_{elasticity}','W_{fluid}')
 set(gca,'ycolor','k');
 % ylabel('work','FontName','Times','FontSize',12);
